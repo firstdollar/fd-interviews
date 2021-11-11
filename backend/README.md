@@ -1,5 +1,3 @@
-## FD Interview Challenges
+## Backend
 
-This repository hosts shared challenges that may be used during interviews with First Dollar.
-
-Each sub-project here provides detailed documentation for itself. For details about your particular challenge, please navigate to the expected project and read from there.
+Projects under this path are "backend" related projects and are used to assess engineers whose primary work will be systems development at First Dollar.
