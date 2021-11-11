@@ -4,9 +4,9 @@ This project is designed to be a collaborative coding exercise for interviews.
 
 The goal of this project is as follows:
 
-1. Define the database schema for the `Transaction` object defined in this project.
-2. Implement the `saveTransactions` API, a bulk upsert API on the table created in Step 1.
-3. Add a unit test for the API.
+1. Define the database schema for the `Transaction` object defined in this project. This will require updating the "up" migration in [`src/transactions/migrations.ts`](./src/transactions/migrations.ts). A stub is provided initially.
+2. Implement the `saveTransactions` API, a bulk upsert API on the table created in Step 1. This will require implementing the `TransactionsService` at [`src/transactions/transactionsService.ts`](./src/transactions/transactionsService.ts) 
+3. Implement the "todo" tests for the `TransactionsService` at [`src/transactions/transactionsService.test.ts`](./src/transactions/transactionsService.test.ts) 
 
 ### Getting Started
 
