@@ -1,8 +1,7 @@
 import DogApi from './api'
 
 describe('DogApi', () => {
-    // TODO: re-enable this tet when DogApi is implemented
-    test.skip('List All Breeds', async () => {
+    test('List All Breeds', async () => {
         const api = new DogApi();
         const breeds = await api.listBreeds();
         expect(breeds.length).toBeGreaterThan(0);
