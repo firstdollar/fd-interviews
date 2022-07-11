@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prettify": "prettier --write src/**/*.ts"
   },
   "jest": {
     "preset": "ts-jest",
@@ -16,6 +17,7 @@
     "@types/better-sqlite3": "7.5.0",
     "@types/jest": "28.1.4",
     "jest": "28.1.2",
+    "prettier": "2.7.1",
     "ts-jest": "28.0.5",
     "typescript": "4.7.4"
   }
