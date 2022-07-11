@@ -1,14 +1,14 @@
-import { Database } from "sqlite";
-import { DbTransactionsService, TransactionsService, up as createTransactionsTable, down as dropTransactionsTable } from ".";
-import { getDatabase } from "../database";
+import { Database } from 'sqlite';
+import { DbTransactionsService, TransactionsService, up as createTransactionsTable, down as dropTransactionsTable } from '.';
+import { getDatabase } from '../database';
 
 describe('TransactionsService', () => {
     let database: Database;
-    let transactionService: TransactionsService;
+    let transactionsService: TransactionsService;
 
     beforeAll(async () => {
         database = await getDatabase();
-        transactionService = new DbTransactionsService(database);
+        transactionsService = new DbTransactionsService(database);
     });
 
     beforeEach(async () => {
@@ -20,7 +20,7 @@ describe('TransactionsService', () => {
     });
 
     test('Transactions are Initially Empty', async () => {
-        const transactions = await transactionService.listTransactions();
+        const transactions = await transactionsService.listTransactions();
         expect(transactions).toEqual([]);
     });
 

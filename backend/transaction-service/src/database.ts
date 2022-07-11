@@ -1,5 +1,5 @@
 import sqlite3 from 'sqlite3'
-import { Database, open } from "sqlite";
+import { Database, open } from 'sqlite';
 
 let db: Database;
 
@@ -12,7 +12,7 @@ export async function getDatabase(): Promise<Database> {
         db = await open({
             filename: '/tmp/transactions.db',
             driver: sqlite3.Database
-        });;
+        });
     }
     return db;
 }

@@ -1,4 +1,4 @@
-import { Database } from "sqlite";
+import { Database } from 'sqlite';
 
 /**
  * "up" migration for the transactions table. This API should create the table
