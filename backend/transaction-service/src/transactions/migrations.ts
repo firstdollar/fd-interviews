@@ -1,4 +1,4 @@
-import { Database } from 'sqlite';
+import { Database } from 'better-sqlite3';
 
 /**
  * "up" migration for the transactions table. This API should create the table
@@ -6,10 +6,10 @@ import { Database } from 'sqlite';
  * migrations at this time.
  */
 export async function up(database: Database): Promise<void> {
-    await database.exec(`
+	await database.exec(`
         CREATE TABLE IF NOT EXISTS transactions
         (id TEXT PRIMARY KEY, date TEXT NOT NULL)
-    `)
+    `);
 }
 
 /**
@@ -17,6 +17,5 @@ export async function up(database: Database): Promise<void> {
  * table.
  */
 export async function down(database: Database): Promise<void> {
-    await database.exec('DROP TABLE IF EXISTS transactions');
+	await database.exec(`DROP TABLE IF EXISTS transactions`);
 }
-

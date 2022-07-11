@@ -29,6 +29,5 @@ It is acceptable to use google and other tools to inform implementation. There i
 
 ## Documentation Links
 
-1. `sqlite` docs: <https://www.sqlite.org/>
-2. JS `sqlite` API: <https://www.npmjs.com/package/sqlite>
-3. Jest API: <https://jestjs.io/docs/getting-started>
+1. `better-sqlite3` API: <https://github.com/WiseLibs/better-sqlite3/blob/master/docs/api.md>
+2. `jest` API: <https://jestjs.io/docs/api>
