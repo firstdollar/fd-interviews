@@ -1,14 +1,19 @@
-import { Database } from "sqlite";
-import { DbTransactionsService, TransactionsService, up as createTransactionsTable, down as dropTransactionsTable } from ".";
-import { getDatabase } from "../database";
+import { Database } from 'better-sqlite3';
+import {
+    DbTransactionsService,
+    TransactionsService,
+    up as createTransactionsTable,
+    down as dropTransactionsTable,
+} from '.';
+import { getDatabase } from '../database';
 
 describe('TransactionsService', () => {
     let database: Database;
-    let transactionService: TransactionsService;
+    let transactionsService: TransactionsService;
 
     beforeAll(async () => {
         database = await getDatabase();
-        transactionService = new DbTransactionsService(database);
+        transactionsService = new DbTransactionsService(database);
     });
 
     beforeEach(async () => {
@@ -19,11 +24,11 @@ describe('TransactionsService', () => {
         await dropTransactionsTable(database);
     });
 
-    test('Transactions are Initially Empty', async () => {
-        const transactions = await transactionService.listTransactions();
+    test('transactions are initially empty', async () => {
+        const transactions = await transactionsService.listTransactions();
         expect(transactions).toEqual([]);
     });
 
-    test.todo('Saves Transactions to the Database');
-    test.todo('Handles Updates to Existing Transactions');
+    test.todo('saves transactions to the database');
+    test.todo('handles updates to existing transactions');
 });

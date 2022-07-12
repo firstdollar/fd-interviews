@@ -32,15 +32,15 @@ export type Transaction = {
     description: string;
     // type of trx (deposit, withdrawal, etc)
     type: TransactionType;
-}
+};
 
 /**
  * Money: a numeric amount with a defined currency.
  */
-export type Money =  {
+export type Money = {
     value: number;
     currency: string;
-}
+};
 
 /**
  * The possible set of transaction types.
