@@ -9,7 +9,7 @@ export class DbTransactionsService implements TransactionsService {
     }
 
     async listTransactions(): Promise<Transaction[]> {
-        return this.database
+        const transactions = this.database
             .prepare(
                 `
                 SELECT
@@ -20,5 +20,6 @@ export class DbTransactionsService implements TransactionsService {
                 `,
             )
             .all();
+        return transactions;
     }
 }

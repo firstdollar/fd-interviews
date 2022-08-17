@@ -4,9 +4,9 @@ This project is designed to be a collaborative coding exercise for interviews.
 
 The goal of this project is as follows:
 
-1. Define the database schema for the `Transaction` object defined in this project. This will require updating the "up" migration in [`src/transactions/migrations.ts`](./src/transactions/migrations.ts). A stub is provided initially.
+1. Define the database schema for the [Transaction](./src/transactions/types.ts#L24) type defined in this project. This will require updating the `up` migration in [`src/transactions/migrations.ts`](./src/transactions/migrations.ts). A stub is provided initially.
 2. Implement the `saveTransactions` API, a bulk upsert API on the table created in Step 1. This will require implementing the `TransactionsService` at [`src/transactions/transactionsService.ts`](./src/transactions/transactionsService.ts)
-3. Implement the "todo" tests for the `TransactionsService` at [`src/transactions/transactionsService.test.ts`](./src/transactions/transactionsService.test.ts)
+3. Implement the `todo` tests for the `TransactionsService` at [`src/transactions/transactionsService.test.ts`](./src/transactions/transactionsService.test.ts)
 
 ## Getting Started
 
@@ -29,5 +29,6 @@ It is acceptable to use google and other tools to inform implementation. There i
 
 ## Documentation Links
 
-1. `better-sqlite3` API: <https://github.com/WiseLibs/better-sqlite3/blob/master/docs/api.md>
-2. `jest` API: <https://jestjs.io/docs/api>
+- `SQLite` syntax: <https://www.sqlite.org/lang.html>
+- `better-sqlite3` API: <https://github.com/WiseLibs/better-sqlite3/blob/master/docs/api.md>
+- `jest` docs: <https://jestjs.io/docs/api>

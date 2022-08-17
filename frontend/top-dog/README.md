@@ -33,9 +33,9 @@ Solutions will be evaluated primarily on correctness in terms of meeting the sta
 
 Don't worry about pixel perfection (though attention to detail will be noticed). Over-investing time at this stage is not the best use of time. The project should take between 1 and 4 hours to complete.
 
-# Getting Started
+## Getting Started
 
-This project depends on `git`, `npm`, and the React ecosystem. If you don't have `git` installed, you can download a zip of this project or you can install git. If you don't have `npm` installed, install it via `nvm`: https://github.com/nvm-sh/nvm#installing-and-updating
+This project depends on `git`, `npm`, and the React ecosystem. If you don't have `git` installed, you can download a zip of this project or you can install git. If you don't have `npm` installed, install it via [nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 1. Clone this project.
 2. `npm install`
@@ -62,7 +62,7 @@ Adding and using third-party dependencies in your solution is acceptable. Some a
 
 ## Documentation Links
 
-1. DogCEO API Docs: https://dog.ceo/dog-api/documentation/
-2. React Docs: https://reactjs.org/docs/getting-started.html
-3. jest Docs: https://jestjs.io/docs/getting-started
-4. react-testing Docs: https://testing-library.com/docs/react-testing-library/intro/
+- DogCEO API Docs: <https://dog.ceo/dog-api/documentation/>
+- React Docs: <https://reactjs.org/docs/getting-started.html>
+- jest Docs: <https://jestjs.io/docs/getting-started>
+- react-testing Docs: <https://testing-library.com/docs/react-testing-library/intro/>
