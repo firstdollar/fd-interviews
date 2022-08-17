@@ -22,15 +22,15 @@ export interface TransactionsService {
  * Application type reflecting transaction data stored in the DB.
  */
 export type Transaction = {
-    // the ID of the transaction
+    /** the ID of the transaction */
     transactionId: string;
-    // the monetary amount of the transaction
+    /** the monetary amount of the transaction */
     amount: Money;
-    // the date the transaction was created: YYYY-MM-DD
+    /** the date the transaction was created: YYYY-MM-DD */
     date: string;
-    // description of the transaction
+    /** description of the transaction */
     description: string;
-    // type of trx (deposit, withdrawal, etc)
+    /** type of trx (deposit, withdrawal, etc) */
     type: TransactionType;
 };
 

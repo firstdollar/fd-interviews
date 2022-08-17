@@ -1,11 +1,11 @@
 import { Database } from 'better-sqlite3';
 import {
+    getDatabase,
     DbTransactionsService,
     TransactionsService,
     up as createTransactionsTable,
     down as dropTransactionsTable,
 } from '.';
-import { getDatabase } from '../database';
 
 describe('TransactionsService', () => {
     let database: Database;

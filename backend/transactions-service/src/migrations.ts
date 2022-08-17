@@ -6,10 +6,14 @@ import { Database } from 'better-sqlite3';
  * migrations at this time.
  */
 export async function up(database: Database): Promise<void> {
-    await database.exec(`
+    database.exec(`
         CREATE TABLE IF NOT EXISTS transactions
-        (id TEXT PRIMARY KEY, date TEXT NOT NULL)
+        (
+            id TEXT PRIMARY KEY NOT NULL,
+            date TEXT NOT NULL
+        );
     `);
+    // console.log(database.pragma('table_info(transactions)'));
 }
 
 /**
@@ -17,5 +21,5 @@ export async function up(database: Database): Promise<void> {
  * table.
  */
 export async function down(database: Database): Promise<void> {
-    await database.exec(`DROP TABLE IF EXISTS transactions`);
+    database.exec(`DROP TABLE IF EXISTS transactions`);
 }
