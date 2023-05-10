@@ -13,7 +13,6 @@ export async function up(database: Database): Promise<void> {
             date TEXT NOT NULL
         );
     `);
-    // console.log(database.pragma('table_info(transactions)'));
 }
 
 /**
