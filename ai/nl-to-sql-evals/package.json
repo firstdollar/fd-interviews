@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "db:setup": "tsx scripts/setup.ts",
+    "postinstall": "tsx scripts/setup.ts"
+  },
+  "dependencies": {
+    "@google/genai": "1.50.1",
+    "better-sqlite3": "11.3.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.11",
+    "@types/node": "22.19.17",
+    "tsx": "4.19.2",
+    "typescript": "5.9.3"
+  }
+}
