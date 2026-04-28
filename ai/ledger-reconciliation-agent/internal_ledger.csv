@@ -1,0 +1,12 @@
+id,posted_date,member_id,amount,type,note
+L01,2026-04-15,M-1001,125.00,card_purchase,CVS Pharmacy #4421
+L02,2026-04-15,M-1002,150.00,payroll,Employer ACH
+L03,2026-04-15,M-1003,250.00,payroll,Employer ACH
+L04,2026-04-15,M-1004,200.00,payroll,Employer ACH
+L05,2026-04-15,M-1005,290.00,payroll,Employer ACH
+L06,2026-04-16,M-1001,250.00,card_purchase,WALGREENS #4321
+L07,2026-04-16,M-1006,200.00,card_purchase,Walgreens
+L08,2026-04-17,M-1001,75.00,card_purchase,Amazon
+L09,2026-04-17,M-1007,75.00,card_purchase,Amazon
+L10,2026-04-17,M-1008,75.00,card_purchase,Amazon
+L11,2026-04-18,M-1009,60.00,card_purchase,Target

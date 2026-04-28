@@ -1,0 +1,18 @@
+[
+  {"processor_ids": ["S001"], "internal_ids": ["L01"], "category": "1:1"},
+  {"processor_ids": ["S002"], "internal_ids": ["L02", "L03", "L04", "L05"], "category": "M:N aggregation"},
+  {"processor_ids": ["S003"], "internal_ids": ["L06", "L07"], "category": "M:N aggregation"},
+  {
+    "processor_ids": ["S004", "S005", "S006"],
+    "internal_ids": ["L08", "L09", "L10"],
+    "category": "burst",
+    "note": "Any 1:1 permutation of these three pairs is also acceptable; commit as three matches or one many-to-many."
+  },
+  {"processor_ids": ["S007"], "internal_ids": [], "category": "unmatched", "reason": "No internal counterpart on or near 2026-04-18 with amount 34000"},
+  {
+    "processor_ids": ["S008"],
+    "internal_ids": ["L11"],
+    "category": "1:1 with date variance",
+    "note": "Internal posted_date is 2026-04-18, settlement is 2026-04-19. Acceptable to commit with note, or flag for human review."
+  }
+]
