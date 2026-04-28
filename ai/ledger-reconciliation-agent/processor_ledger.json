@@ -1,0 +1,10 @@
+[
+  {"id": "S001", "date": "2026-04-15", "amount_cents": 12500, "type": "card_settlement", "merchant": "CVS"},
+  {"id": "S002", "date": "2026-04-15", "amount_cents": 89000, "type": "ach_credit", "narrative": "Employer payroll batch"},
+  {"id": "S003", "date": "2026-04-16", "amount_cents": 45000, "type": "card_settlement", "merchant": "Walgreens"},
+  {"id": "S004", "date": "2026-04-17", "amount_cents": 7500, "type": "card_settlement", "merchant": "AMAZON"},
+  {"id": "S005", "date": "2026-04-17", "amount_cents": 7500, "type": "card_settlement", "merchant": "AMAZON"},
+  {"id": "S006", "date": "2026-04-17", "amount_cents": 7500, "type": "card_settlement", "merchant": "AMAZON"},
+  {"id": "S007", "date": "2026-04-18", "amount_cents": 34000, "type": "internal_transfer", "narrative": "Quarterly fee allocation"},
+  {"id": "S008", "date": "2026-04-19", "amount_cents": 6000, "type": "card_settlement", "merchant": "Target"}
+]
