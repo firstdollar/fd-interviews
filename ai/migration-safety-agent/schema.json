@@ -1,0 +1,76 @@
+{
+  "members": {
+    "columns": [
+      {"name": "id", "type": "uuid", "nullable": false},
+      {"name": "email", "type": "text", "nullable": false},
+      {"name": "dob", "type": "date", "nullable": false},
+      {"name": "plan_id", "type": "uuid", "nullable": false},
+      {"name": "created_at", "type": "timestamptz", "nullable": false, "default": "now()"}
+    ],
+    "primary_key": ["id"],
+    "foreign_keys": [
+      {"column": "plan_id", "references": {"table": "plans", "column": "id"}}
+    ],
+    "indexes": ["members_email_idx"],
+    "row_count_estimate": 1850000
+  },
+  "accounts": {
+    "columns": [
+      {"name": "id", "type": "uuid", "nullable": false},
+      {"name": "member_id", "type": "uuid", "nullable": false},
+      {"name": "balance_cents", "type": "bigint", "nullable": false, "default": "0"},
+      {"name": "status", "type": "text", "nullable": false},
+      {"name": "opened_at", "type": "timestamptz", "nullable": false, "default": "now()"}
+    ],
+    "primary_key": ["id"],
+    "foreign_keys": [
+      {"column": "member_id", "references": {"table": "members", "column": "id"}}
+    ],
+    "indexes": ["accounts_member_id_idx"],
+    "row_count_estimate": 1920000
+  },
+  "transactions": {
+    "columns": [
+      {"name": "id", "type": "uuid", "nullable": false},
+      {"name": "account_id", "type": "uuid", "nullable": false},
+      {"name": "amount_cents", "type": "bigint", "nullable": false},
+      {"name": "type", "type": "text", "nullable": false},
+      {"name": "status", "type": "text", "nullable": false},
+      {"name": "occurred_at", "type": "timestamptz", "nullable": false}
+    ],
+    "primary_key": ["id"],
+    "foreign_keys": [
+      {"column": "account_id", "references": {"table": "accounts", "column": "id"}}
+    ],
+    "indexes": ["transactions_account_id_occurred_at_idx", "transactions_status_idx"],
+    "row_count_estimate": 84000000
+  },
+  "cards": {
+    "columns": [
+      {"name": "id", "type": "uuid", "nullable": false},
+      {"name": "account_id", "type": "uuid", "nullable": false},
+      {"name": "last_four", "type": "text", "nullable": false},
+      {"name": "status", "type": "text", "nullable": false},
+      {"name": "issued_at", "type": "timestamptz", "nullable": false, "default": "now()"}
+    ],
+    "primary_key": ["id"],
+    "foreign_keys": [
+      {"column": "account_id", "references": {"table": "accounts", "column": "id"}}
+    ],
+    "indexes": ["cards_account_id_idx"],
+    "row_count_estimate": 1640000
+  },
+  "plans": {
+    "columns": [
+      {"name": "id", "type": "uuid", "nullable": false},
+      {"name": "name", "type": "text", "nullable": false},
+      {"name": "type", "type": "text", "nullable": false},
+      {"name": "contribution_limit_individual", "type": "integer", "nullable": false},
+      {"name": "contribution_limit_family", "type": "integer", "nullable": false}
+    ],
+    "primary_key": ["id"],
+    "foreign_keys": [],
+    "indexes": [],
+    "row_count_estimate": 42
+  }
+}
