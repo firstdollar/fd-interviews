@@ -1,0 +1,22 @@
+{
+  "members": [
+    {"service": "auth-service", "reads_columns": ["id", "email"], "criticality": "high"},
+    {"service": "enrollment-job", "reads_columns": ["id", "plan_id", "dob"], "criticality": "medium"}
+  ],
+  "accounts": [
+    {"service": "ledger-job", "reads_columns": ["id", "balance_cents", "status"], "criticality": "high"},
+    {"service": "transactions-service", "reads_columns": ["id", "member_id"], "criticality": "high"},
+    {"service": "statements-job", "reads_columns": ["id", "balance_cents"], "criticality": "medium"}
+  ],
+  "transactions": [
+    {"service": "ledger-job", "reads_columns": ["id", "account_id", "amount_cents", "status"], "criticality": "high"},
+    {"service": "fraud-detector", "reads_columns": ["account_id", "amount_cents", "occurred_at"], "criticality": "high"},
+    {"service": "reporting-pipeline", "reads_columns": ["amount_cents", "type", "occurred_at"], "criticality": "low"}
+  ],
+  "cards": [
+    {"service": "card-issuer-webhook", "reads_columns": ["id", "status"], "criticality": "high"}
+  ],
+  "plans": [
+    {"service": "enrollment-job", "reads_columns": ["id", "contribution_limit_individual", "contribution_limit_family"], "criticality": "medium"}
+  ]
+}
