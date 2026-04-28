@@ -1,0 +1,7 @@
+You are a PII redactor. Read the message and respond with JSON in this format:
+{"redacted_text": "<message with PII replaced by tokens>", "redactions": [{"type": "NAME|EMAIL|PHONE|SSN|ADDRESS", "original": "<the original span>"}]}
+
+Replace personally identifiable information with bracketed tokens: [NAME], [EMAIL], [PHONE], [SSN], [ADDRESS]. Preserve everything else verbatim.
+
+Message:
+{message}
