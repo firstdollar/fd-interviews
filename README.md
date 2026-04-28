@@ -6,4 +6,6 @@ Projects under the [frontend](./frontend/) directory are used to assess engineer
 
 Projects under the [backend](./backend/) directory are used to assess engineers whose primary work will be systems development at First Dollar.
 
+Projects under the [ai](./ai/) directory are used to assess engineers whose primary work will be AI platform development at First Dollar.
+
 Each sub-project under these directories provides detailed documentation for itself. For details about your particular challenge, please navigate to the expected project and read from there.
